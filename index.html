@@ -47,14 +47,10 @@
         <div class="orders">
             <ul>
                 <li>
-                    <i class="fas fa-globe-europe"></i>
+                    <i class="fas fa-globe-europe"  id="light" onclick="myFunction_set()"></i>
                 </li>
                 <li>
-                    <i class="fas fa-sun"></i>
-                    <ul class="lang">
-                        <li>عربي</li>
-                        <li>انجليزي</li>
-                    </ul>
+                    <i class="fas fa-sun" onclick="myFunction_get()"></i>
                 </li>
             </ul>
             <a href="" class="active">طلب خدمة
@@ -282,16 +278,16 @@
                 </div>
                 <div class="list-img">
                     <div>
-                        <img src="image/1.png" alt="" srcset="">
+                        <img src="image/1.png" alt="" srcset="" onclick="view()" class="image" id="im">
                     </div>
                     <div>
-                        <img src="image/2.jpg" alt="" srcset="">
+                        <img src="image/2.jpg" alt="" srcset=""onclick="view()" class="image">
                     </div>
                     <div>
-                        <img src="image/3.jfif" alt="" srcset="">
+                        <img src="image/3.jfif" alt="" srcset=""onclick="view()" class="image">
                     </div>
                     <div>
-                        <img src="image/4.jfif" alt="" srcset="">
+                        <img src="image/4.jfif" alt="" srcset="" onclick="view()" class="image">
                     </div>
                 </div>
                 
@@ -310,7 +306,15 @@
                 <div>
                     <div class="logo">
                         <img src="image/logo2 1.png" alt="">
-                    </div>     
+                    </div>   
+                    <div class="conemail">
+                        <p>انضم الى النشرة البريدية</p>
+                        <form action="">
+                            <input type="text" name="" id="name" placeholder="ادخال الاسم الخاص بك">
+                            <input type="email" name="" id="email" placeholder="ادخال الايميل الخاص بك">
+                            <button id="myBtn"> ارسال</button>
+                        </form>
+                    </div>  
                      <div class="icos">
                         <span>
                             <i class="fab fa-facebook"></i> 
@@ -325,6 +329,7 @@
                             <i class="fab fa-linkedin-in"></i>
                         </span>
                     </div>
+                   
                 </div>
             </div>
          
@@ -339,5 +344,6 @@
         <p>جميع الحقوق محفوظة لدى مراد حسن </p>
     </footer>
     <!-- end footer  -->
+    <script src="js/main.js"></script>
 </body>
 </html>

@@ -78,9 +78,10 @@ nav ul li a
 {
     color: var(--font-content-color);
 }
-.active,nav ul li a:hover
+.active,nav ul li a:hover,.taps ul li:hover,.icos span i:hover
 {
     color: var(--active-color);
+    cursor: pointer;
 }
 .orders ,.orders ul
 {
@@ -93,8 +94,8 @@ nav ul li a
 }
 .orders ul li
 {
-    padding: 0 20px;
-
+    padding: 0 15px;
+    font-size: 25px;
 }
 .orders .lang
 {
@@ -275,7 +276,7 @@ nav ul li a
  /* start serives */
  #serives, #proojects,#contact
  {
-     background-color: var(--main-color);
+     background-color: var(--secondary-color);
  }
 #serives .txt,#proojects .container .txt ,#contact .container .txt 
 {
@@ -343,6 +344,10 @@ nav ul li a
   width: 250px;
   height: 250px;
 }
+#proojects .list-img > div img:hover 
+{
+    cursor: pointer;
+}
  /* end proojects */
 
  /* start contact */
@@ -352,6 +357,38 @@ nav ul li a
     justify-content: center;
     align-items: center
  }
+ .conemail
+ {
+     text-align: center;
+     padding: 1rem 0;
+ }
+ .conemail form
+ {
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap;
+ }
+ .conemail form input,.conemail form button
+ {
+    margin: 10px 20px;
+    padding: 10px 20px;
+    border: 0.5px;
+    border-radius: 20px;
+    background-color: var(--font-header-color);
+    background-color: #fdfdfd;
+    width: 300px;
+    box-shadow: -1px 0px 3px 0px #2f2f2f;
+}
+.conemail form button
+ {
+    width: 150px;
+    background-color: var(--active-color);
+ }
+.conemail form input:hover,.conemail form input:focus
+{
+    border: .5px  solid var(--active-color);
+    outline: 0;
+}
  .icos
  {
      font-size: 25px;
@@ -371,61 +408,11 @@ footer
     height: 80px;
     text-align: center;
     padding: 10px;
-    background-color: var(--secondary-color);
+    background-color: var(--main-color);
 }
 /* end foooter  */
 
 /* start media  */
-/* small  */
- 
-/* end media  */
- 
-/* large  */
-@media()
-{
-    .container {
-        padding: 20px 50px;
-    }
-    #home,#about,#skills
-    {
-        height: 89vh;
-        overflow: hidden;
-        background-color: var(--secondary-color);
-    }
-    #home .container, #about .container, #skills .container, #serives .deitles-serives {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-    }
-    nav {
-        display: inline-block;
-    }
-    #home .txt p, #about .container p {
-        width: 600px;
-    }
-    #about .txt {
-        padding-right: 10rem;
-    }
-    #about .row > div
-    {
-        width: 40%;
-    }
-    #about .row > div p
-    {
-        width: 250px;
-    }
-    #skills ul {
-        padding-left: 5rem;
-    }
-    #proojects .list-img {
-        display: flex;
-        justify-content: space-around;
-        flex-flow: column nowrap;
-        align-items: center;
-        margin: 50px;
-        flex-direction: row;
-    }
-}
 
 /* strat media qury  */
 
@@ -448,15 +435,11 @@ footer
         padding: 20px 20px;
     }
     #home, #about, #skills {
-        height: auto;
+        height: 100vh;
         background-color: var(--secondary-color);
     }
     /* start header  */
     nav
-    {
-        display: none;
-    }
-    nav ul 
     {
         display: none;
     }
@@ -484,13 +467,11 @@ footer
          height: 68vh;
      }
      #home .txt {
-        padding-top: 7rem;
+        padding-top: 0rem;
     }
     #home img ,#about .list-img
     {
-        width: 80vw;
-        height: 100vh;
-        padding-bottom: 14rem;
+      display: none;
     }
     #about img {
         width: 300px;
@@ -526,6 +507,8 @@ footer
     }
     #proojects .list-img {
         flex-direction: column;
+        position: relative;
+        overflow: hidden;
     }
 } 
 
@@ -536,11 +519,26 @@ footer
     .container {
         padding: 20px 30px;
     }
-    nav {
+    nav   {
         display: block;
+    }
+    .orders ul {
+        display: flex;
+    }
+    .orders ul li i
+    {
+        font-size: 1rem;
+    }
+    .orders ul li i:hover
+    {
+        cursor:pointer ;
+        color: var(--active-color);
     }
     #home .container > div {
         height: 51.5vh;
+    }
+    #home .txt {
+        padding-top: 7rem;
     }
     #home .container, #about .container, #skills .container, #serives .deitles-serives {
         flex-direction: row;
@@ -548,7 +546,7 @@ footer
     #home img, #about .list-img {
         width: 50vw;
         height: 100vh;
-        transform: translateY(-250px);
+        display: block;
     }
     #about img {
         width: 200px;
@@ -571,7 +569,7 @@ footer
     }
     .deitles-serives > div {
         margin-bottom: 0;
-        width: 26vw;
+        width: 23vw;
      }
      #proojects .list-img {
         flex-direction: row;
@@ -590,6 +588,10 @@ footer
         height: 100vh;
         background-color: var(--secondary-color);
     }
+    #home
+    {
+        height: 120vh;
+    }
     #home .container > div {
         height: 100vh;
         width: 50%;
@@ -598,7 +600,12 @@ footer
         width: 80%;
         height: 100%;
         padding-bottom: 0;
-        transform: translateX(-100px);
+        transform: translateX(-200px);
+    }
+    #skills
+    {
+        height: 80vh;
+        padding-top: 3rem;
     }
 }
 /* end media quary  */
