@@ -377,53 +377,11 @@ footer
 
 /* start media  */
 /* small  */
-@media(min-width:350px)
-{
-    nav
-    {
-        display: none;
-    }
-
-    .orders a span i 
-    {
-        display: none;
-    }
-    #home .container, #about .container, #skills .container, #serives .deitles-serives {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
-    #home,#about,#skills
-    {
-        height: auto;
-    }
-    #about .txt {
-        padding: 0rem;
-    }
-    #home .txt p, #about .container p {
-        padding-top: 10px;
-        width: 90%;
-    }
-    #proojects .list-img {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: nowrap;
-        align-items: center;
-        margin: 50px;
-        flex-direction: column;
-    }
-    .deitles-serives > div {
-        margin-bottom: 50px;
-    }
-}
+ 
 /* end media  */
-/* medium */
-@media(min-width:992px)
-{
-
-}
+ 
 /* large  */
-@media(min-width:1200px)
+@media()
 {
     .container {
         padding: 20px 50px;
@@ -468,3 +426,179 @@ footer
         flex-direction: row;
     }
 }
+
+/* strat media qury  */
+
+/* small  devices */
+/* Mobile devices */
+@media (min-width:280px)
+{
+    .orders ul 
+    {
+        display: none;
+    }
+}
+@media (min-width:320px)
+{
+    :root
+    {
+        font-size: 10px;
+    }
+    .container {
+        padding: 20px 20px;
+    }
+    #home, #about, #skills {
+        height: auto;
+        background-color: var(--secondary-color);
+    }
+    /* start header  */
+    nav
+    {
+        display: none;
+    }
+    nav ul 
+    {
+        display: none;
+    }
+    .orders ul
+    {
+        margin: 0;
+    }
+    .orders ul, .orders a {
+        margin-left: 0px; 
+        line-height: 1;
+        font-size: 12px;
+        padding: 16px;
+        width: 120px;
+    }
+    .orders a span i {
+        display: inline;
+    }
+    /* start main  */
+    #home .container, #about .container, #skills .container, #serives .deitles-serives {
+         flex-direction: column;
+         flex-wrap: nowrap;
+     }
+     #home .container > div
+     {
+         height: 68vh;
+     }
+     #home .txt {
+        padding-top: 7rem;
+    }
+    #home img ,#about .list-img
+    {
+        width: 80vw;
+        height: 100vh;
+        padding-bottom: 14rem;
+    }
+    #about img {
+        width: 300px;
+    }
+    #about .txt {
+        padding: 0;
+    }
+    #about .row p {
+        width: auto;
+    }
+    #about .row {
+         flex-wrap: nowrap;
+         padding-top: 20px;
+     }
+     #about .row > div {
+         width: 50%;
+     }
+
+     #skills .container {
+        padding: 0rem 20px;
+    }
+    #skills .txt {
+        padding: 0px ;
+    }
+    #skills ul {
+        width: 100%;
+        margin: 0;
+    }
+    .deitles-serives > div {
+        margin-bottom: 50px;
+        width: 60vw;
+        padding: 30px;
+    }
+    #proojects .list-img {
+        flex-direction: column;
+    }
+} 
+
+/* medium devices */
+/* 481px — 768px: iPads, Tablets */
+@media (min-width:480px)
+{
+    .container {
+        padding: 20px 30px;
+    }
+    nav {
+        display: block;
+    }
+    #home .container > div {
+        height: 51.5vh;
+    }
+    #home .container, #about .container, #skills .container, #serives .deitles-serives {
+        flex-direction: row;
+    }
+    #home img, #about .list-img {
+        width: 50vw;
+        height: 100vh;
+        transform: translateY(-250px);
+    }
+    #about img {
+        width: 200px;
+    }
+    #about .txt {
+         padding-right: 7rem;
+    }
+    #about .row p {
+        width: 60%;
+    }
+    #skills .container > div {
+        padding: 0px;
+        width: 50%;
+    }
+    #skills ul {
+        width: 100%;
+        padding: 0 60px;
+        margin-top: 70px;
+        line-height: 2.5;
+    }
+    .deitles-serives > div {
+        margin-bottom: 0;
+        width: 26vw;
+     }
+     #proojects .list-img {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+/* 769px — 1024px: Small screens, laptops */
+@media(min-width:769px)
+{
+    :root
+    {
+        font-size: 17px;
+    }
+    #home, #about, #skills {
+        height: 100vh;
+        background-color: var(--secondary-color);
+    }
+    #home .container > div {
+        height: 100vh;
+        width: 50%;
+    }
+    #home img, #about .list-img {
+        width: 80%;
+        height: 100%;
+        padding-bottom: 0;
+        transform: translateX(-100px);
+    }
+}
+/* end media quary  */
