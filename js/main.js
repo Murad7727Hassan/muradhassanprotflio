@@ -10,7 +10,7 @@ function myFunction_get() {
      r.style.setProperty('--secondary-color', 'white');
      r.style.setProperty(' --font-content-color', 'black');
   }
-  
+
   function myFunction_set() {
     // Get the styles (properties and values) for the root
     var rs = getComputedStyle(r);
@@ -34,7 +34,7 @@ function myFunction_get() {
             else
             {
                 name.style.color = "red";
-                name.style.border = "1px solid red";;  
+                name.style.border = "1px solid red";
             }
             //  check email valid 
             let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -52,8 +52,5 @@ function myFunction_get() {
   });
   function view()
   {
-    document.getElementById("im").style.position = "absolute" ;
-    document.getElementById("im").style.top = "25%" ;
-    document.getElementById("im").style.left = "25%" ;
-    document.getElementById("im").style.zIndex = " " ;
+    document.getElementById("im").style.border = "5px solid green" ;
   }
